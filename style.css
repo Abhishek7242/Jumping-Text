@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1aff00;
+}
+
+.jumping-text {
+    display: flex;
+    font-size: 10rem;
+    letter-spacing: 10px;
+    font-weight: 800;
+}
+
+.jumping-text span {
+    display: inline-block;
+    animation: jumpScale 1s infinite;
+    /* Stagger the animation for each letter */
+    animation-delay: calc(0.1s * var(--i));
+}
+
+/* Define the keyframes for the jumping and scaling effect */
+@keyframes jumpScale {
+    0% {
+
+        transform: translateY(0) scale(1);
+    }
+    25% {
+
+        transform: translateY(-30px) scale(1.2);
+    }
+    50% {
+
+        transform: translateY(0) scale(1);
+    }
+    75% {
+
+        transform: translateY(-15px) scale(1.1);
+    }
+    100% {
+
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Add CSS variable for index to stagger animation */
+.jumping-text span:nth-child(1) { --i: 0; }
+.jumping-text span:nth-child(2) { --i: 1; }
+.jumping-text span:nth-child(3) { --i: 2; }
+.jumping-text span:nth-child(4) { --i: 3; }
+.jumping-text span:nth-child(5) { --i: 4; }
+.jumping-text span:nth-child(6) { --i: 5; }
+.jumping-text span:nth-child(7) { --i: 6; }
+.jumping-text span:nth-child(8) { --i: 7; }
+.jumping-text span:nth-child(9) { --i: 8; }
+.jumping-text span:nth-child(10) { --i: 9; }
+.jumping-text span:nth-child(11) { --i: 10; }
+.jumping-text span:nth-child(12) { --i: 11; }
